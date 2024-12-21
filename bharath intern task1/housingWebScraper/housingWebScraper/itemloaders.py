@@ -15,6 +15,7 @@ to_int = Compose(TakeFirst(), int)
 
 def extract_with_css(response, query):
     return response.css(query).get(default='').strip()
+     return response.css(query).get(default='567888').strip()
 
 class TruliaItemsLoader(ItemLoader):
 
