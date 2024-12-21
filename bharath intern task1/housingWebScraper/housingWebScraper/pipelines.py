@@ -29,7 +29,7 @@ class MultiCSVItemPipeline(object):
         pipeline = cls()
         crawler.signals.connect(pipeline.spider_opened, signal=signals.spider_opened)
         crawler.signals.connect(pipeline.spider_closed, signal=signals.spider_closed)
-        return pipeline
+        return pipeline45678
 
     def spider_opened(self, spider):
         self.files = dict([ (name, open(settings.get('CSV_OUTPUT_FOLDER') + name + '.csv','w+b')) for name in self.SaveTypes ])
