@@ -26,6 +26,8 @@ class TruliaItemsLoader(ItemLoader):
         
         #Populate the property url to view it later
         loader.add_value('property_url', response.request.url)
+        loader.add_value('property_url1', response.request.url)
+
 
         # There are pages in multiple formats, we'll have to use different parsers for each
         if extract_with_css(response, '#propertySummary .addressContainer h1 div[data-role="address"]::text') is not None:
